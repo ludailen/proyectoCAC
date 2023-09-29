@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*{/*reseteo de valores por defecto en etiquetas*/
+*{
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
 /*CLASES UTILITARIAS*/
 a {
     text-decoration: none;
@@ -15,13 +15,10 @@ a {
     color: rgb(170, 170, 170);
 }
 .colorVerde{
-    color: green;
+    color: #27A644
 }
 .colorBlanco{
     color: white;
-}
-.centro{
-    text-align: center;
 }
 /*----HEADER----*/
 .cabecera{
@@ -37,12 +34,14 @@ a {
     justify-content: center;
     align-items: center;
 }
-header div nav ul li { /*es mejor hacerlo más específico en vez de poner solo "nav ul li"*/
+header div nav ul li {
     list-style-type: none;
     display: inline;
     margin: 5px;
 }
-
+.checkbox, .icono{
+    display: none;
+}
 /*---BODY----*/
 .conferencia{
     height: 600px;
@@ -72,8 +71,8 @@ header div nav ul li { /*es mejor hacerlo más específico en vez de poner solo 
     margin: 5px;
 }
 .botonVerde{
-    background-color: rgb(44, 190, 44);
-    border: 1.5px solid rgb(44, 190, 44);
+    background-color: #27A844;
+    border: 1.5px solid #27A844;
     border-radius: 5px;
     padding: 15px; 
     margin: 5px;
@@ -91,7 +90,7 @@ header div nav ul li { /*es mejor hacerlo más específico en vez de poner solo 
 }
 .contenedorCard{
     width: 70%;
-    margin: 20px auto;
+    margin: 20px auto 30px;
     display: flex;
     justify-content: space-evenly;
     }
@@ -162,7 +161,7 @@ background-size: 49%;
     align-content: flex-start;
 }
 
-.octubre h2, p{
+.margenOct{
     margin-top: 16px;
     margin-left: 20px;
 }
@@ -178,43 +177,84 @@ background-size: 49%;
     padding: 6px;
 }
 /*---FORMULARIO---*/
+.charlaIgnite{
+    text-align: center;
+    margin-top: 15px;
+}
 .contenedorFormulario{
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center; /*para ubicar el contenedorForm en el centro*/
+    align-items: center; /*para ubicar el formulario en el centro*/
 }
 .formulario{
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+}
+.contenedorInput{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contenedorInput input{
+    width: 35%;
+    margin: 8px;
+    padding: 5px 5px 8px;
+    border: 1px solid rgb(195, 193, 193);
+    border-radius: 5px;
+    font-size: 1em;
+}
+.contenedorText{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
     align-content: center;
 }
-.inputs{
-    display: inline;
-    width: 40%;
-    padding: 5px 5px 8px;
-    margin: 8px;
+.contenedorText textarea{
+    width: 65%;
+    height: 120px;
     border: 1px solid rgb(195, 193, 193);
     border-radius: 5px;
+    margin-top: 8px;
+    min-width: 64%;
+    max-width: 90%;
+    min-height: 30%;
+    max-height: 450px;
+    font-size: 1.2em;
+    padding: 10px;
 }
-
-.formulario div textarea{
-   width: 100%;
-    border: 1px solid rgb(195, 193, 193);
-    border-radius: 5px;
-   /* margin: 8px;*/
+.incluyeTitulo{
+    margin-top: 6px;
+    color: #757575;
+    font-size: 0.8em;
+}
+.botonSubmit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 input[type="submit"]{
-    background-color: rgb(110, 177, 9);
-   /* width: 97%;*/
+    background-color: #96C93E;
+    width: 67%;
+    padding: 15px;
+    margin: 14px;
+    border: none;
+    border-radius: 5px;
+    color: antiquewhite;
+    font-size: 1.2em;
+    cursor: pointer;
 }
-
-
 /*----FOOTER---*/
 footer{
     height: 120px;
@@ -235,3 +275,64 @@ footer{
     display: inline-flex;
     margin: 20px;
 }
+/*---------------MOBILE----------*/
+@media screen and (max-width: 800px){ 
+.cabecera{
+    justify-content: space-between;
+}
+.contenedorLogo{
+    justify-content: flex-start;
+}
+/*---MENÚ HAMBURGUESA---*/
+nav{
+   display: flex;
+   justify-content: center;
+   align-items: baseline;
+}
+.checkbox, .icono{
+    display: flex;
+    align-content: center;
+    width: 24px;
+    height: 24px;
+    position: sticky;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+.icono{
+    pointer-events: none;
+}
+.checkbox{
+    opacity: 0;
+}
+.cierre{
+    display: none;
+}
+.checkbox:checked ~ .menuHamburguesa{
+    display: none;
+}
+.checkbox:checked ~ .cierre{
+    display: block;
+}
+.menu{
+    position: absolute;
+    width: 100%;
+    top: 77px;
+    right: 0px;
+    display: none;
+    background-color: rgb(53, 58, 64);
+}
+.menu li a{
+    background-color: rgb(53, 58, 64);
+    display: block;
+    padding:10px 12px;
+    margin: 0px;
+}
+.menu li a:hover{
+    background-color: #1e5372;
+}
+.checkbox:checked ~ .menu{
+    display: block;
+}
+}
+

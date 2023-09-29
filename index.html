@@ -17,9 +17,12 @@
             </a>
             <h2>Conf Bs As</h2>
             </div>
+            
             <nav>
-                <ul>
-                    <!-- "#conferencia" hace referencia a "id="referencia"" del index-->
+               <input class="checkbox" type="checkbox">
+               <img src="assets/img/menuhamburguesa.png" alt="menu hamburguesa" class="icono menuHamburguesa">
+               <img src="assets/img/menux.png" alt="cierre menu" class="icono cierre">
+                <ul class="menu">
                     <li> <a href="#conferencia">La conferencia</a></li> 
                     <li> <a href="#oradores" class="colorGris">Los oradores</a></li>
                     <li> <a href="#lugarFecha" class="colorGris">El lugar y la fecha</a></li>
@@ -71,27 +74,27 @@
         <section id="lugarFecha">
             <div class="contenedorFecha">
                 <div class="octubre">
-                    <h2>Bs As - Octubre</h2>
-                    <p>Buenos Aires es la provincia y localidad más grande del estado de Argentina. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptate nesciunt, velit architecto porro totam ut fugiat quam. Laudantium accusamus delectus quibusdam rerum nemo vero cum suscipit quod reiciendis repellat.</p>
+                    <h2 class="margenOct">Bs As - Octubre</h2>
+                    <p class="margenOct">Buenos Aires es la provincia y localidad más grande del estado de Argentina. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptate nesciunt, velit architecto porro totam ut fugiat quam. Laudantium accusamus delectus quibusdam rerum nemo vero cum suscipit quod reiciendis repellat.</p>
                     <span><a href="" class="colorBlanco">Conocé más</a></span>
                </div>
             </div> 
         </section>
 
-        <section id="formularioOrador" class="contenedorFormulario">
-            <div class="formulario">
+        <section id="formularioOrador">
+            <div class="contenedorFormulario">
                 <h3 class="textoChico">CONVIÉRTETE EN UN <br> <span class="textoGrande">ORADOR</span></h3>
-                <p class="centro">Anotate como orador para una charla ignite. Cuéntanos de qué quieres hablar!</p>
-                <form action="" >
-                    <div>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required class="inputs">
-                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required class="inputs">
+                <p class="charlaIgnite">Anotate como orador para una charla ignite. Cuéntanos de qué quieres hablar!</p>
+                <form action="" class="formulario">
+                    <div class="contenedorInput">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
                     </div>
-                    <div>
+                    <div class="contenedorText">
                         <textarea name="comentario" id="comentario" cols="60" rows="5" placeholder="Sobre qué quieres hablar?"></textarea>
-                        <p>Recuerda incluir un título para tu charla</p>
+                        <span class="incluyeTitulo"><p>Recuerda incluir un título para tu charla</p></span>
                     </div>
-                    <div>
+                    <div class="botonSubmit">
                         <input type="submit">
                     </div>
                 </form>
