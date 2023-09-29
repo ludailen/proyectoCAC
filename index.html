@@ -78,23 +78,19 @@
             </div> 
         </section>
 
-        <section id="formularioOrador">
-            <div>
-                <h3>Conviértete en un <br> <span>orador</span></h3>
-                <p>Anotate como orador para una charla ignite. Cuéntanos de qué quieres hablar!</p>
-
-                <form action="">
+        <section id="formularioOrador" class="contenedorFormulario">
+            <div class="formulario">
+                <h3 class="textoChico">CONVIÉRTETE EN UN <br> <span class="textoGrande">ORADOR</span></h3>
+                <p class="centro">Anotate como orador para una charla ignite. Cuéntanos de qué quieres hablar!</p>
+                <form action="" >
                     <div>
-                        <label for="nombre"></label>Ingrese su nombre</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                        <input type="text" id="apellido" name="apellido" placeholder="ingresá tu apellido">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required class="inputs">
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required class="inputs">
                     </div>
-
                     <div>
                         <textarea name="comentario" id="comentario" cols="60" rows="5" placeholder="Sobre qué quieres hablar?"></textarea>
                         <p>Recuerda incluir un título para tu charla</p>
                     </div>
-
                     <div>
                         <input type="submit">
                     </div>
@@ -115,11 +111,11 @@
         <div class="contenedorLista">
             <ul>
                 <!--<a href="https://www.whatsapp.com" target="_blank"><p>WhatsApp</p></a>-->
-                <li><a href=>Preguntas frecuentes</a></li>
+                <li class="textoWrap"><a href=>Preguntas frecuentes</a></li>
                 <li><a href="">Contáctanos</a></li>
                 <li><a href="">Prensa</a></li>
                 <li><a href="">Conferencias</a></li>
-                <li><a href="">Términos y condiciones</a></li>
+                <li class="textoWrap"><a href="">Términos y condiciones</a></li>
                 <li><a href="">Privacidad</a></li>
                 <li><a href="">Estudiantes</a></li>
         </ul>

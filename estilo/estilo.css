@@ -20,6 +20,9 @@ a {
 .colorBlanco{
     color: white;
 }
+.centro{
+    text-align: center;
+}
 /*----HEADER----*/
 .cabecera{
     background-color: rgb(53, 58, 64);
@@ -78,12 +81,12 @@ header div nav ul li { /*es mejor hacerlo más específico en vez de poner solo 
 /*---------CARDS CONOCE A LOS ORADORES---------*/
 .textoChico{
    text-align: center;
-   font-size: 1em;
+   font-size: 0.9em;
    color: rgb(75, 75, 75); 
    margin-top: 15px;
 }
 .textoGrande{
-    font-size: 1.8em;
+    font-size: 1.9em;
     color: #000000;
 }
 .contenedorCard{
@@ -174,6 +177,43 @@ background-size: 49%;
     border-radius: 4px;
     padding: 6px;
 }
+/*---FORMULARIO---*/
+.contenedorFormulario{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; /*para ubicar el contenedorForm en el centro*/
+}
+.formulario{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+.inputs{
+    display: inline;
+    width: 40%;
+    padding: 5px 5px 8px;
+    margin: 8px;
+    border: 1px solid rgb(195, 193, 193);
+    border-radius: 5px;
+}
+
+.formulario div textarea{
+   width: 100%;
+    border: 1px solid rgb(195, 193, 193);
+    border-radius: 5px;
+   /* margin: 8px;*/
+}
+input[type="submit"]{
+    background-color: rgb(110, 177, 9);
+   /* width: 97%;*/
+}
+
 
 /*----FOOTER---*/
 footer{
@@ -185,12 +225,13 @@ footer{
 .contenedorLista{
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    align-content: center
+    align-content: center;
+    align-items: baseline;
 }
 .contenedorLista ul li{
+    height: auto;
     display: inline-flex;
- 
-    margin: 10px;
+    margin: 20px;
 }
