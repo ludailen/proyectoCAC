@@ -275,8 +275,14 @@ footer{
     display: inline-flex;
     margin: 20px;
 }
+.contenedorLista ul li a{
+    color: #adadad;
+}
+.contenedorLista ul li a:hover{
+    color: #27A644;
+}
 /*---------------MOBILE----------*/
-@media screen and (max-width: 800px){ 
+@media screen and (max-width: 991px){ 
 .cabecera{
     justify-content: space-between;
 }
@@ -333,6 +339,89 @@ nav{
 }
 .checkbox:checked ~ .menu{
     display: block;
+}
+
+/*--------BODY------*/
+.conferencia{
+    height: 500px;
+}
+.conferenciaInfo{
+    width: 72%;
+    margin-right: 40px;
+    font-size: 1.1em;
+}
+/*---------CARDS CONOCE A LOS ORADORES---------*/
+.contenedorCard{
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+.cardImagen{
+    width: 70%;
+    margin: 12px;
+}
+/*------CONTENEDOR FECHA-------*/
+.contenedorFecha{
+    height: 600px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.octubre{
+    width: 100%;
+    height: 50%;
+    flex-direction: row;
+}
+/*---FORMULARIO---*/
+.charlaIgnite{
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.formulario{
+    width: 85%;
+}
+.contenedorInput{
+    width: 100%;
+}
+.contenedorInput input{
+    width: 90%;
+}
+.contenedorText textarea{
+    width: 100%;
+    min-height: 100px;
+    max-height: 200px;
+}
+
+input[type="submit"]{
+    width: 90%;
+}
+/*----FOOTER---*/
+footer{
+    width: 100%;
+    height: 250px;
+    background-image: linear-gradient(to right, #1c3643, #1c3d4e, #1d445a, #1d4c66, #1e5372);
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+.contenedorLista{
+    width: 80%;
+    justify-content: center;
+    align-items:center;
+}
+.contenedorLista ul li{
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+    color: #757575;
 }
 }
 
