@@ -1,101 +1,82 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilo/estilo.css">
-    <title>Proyecto - Gutierrez Ludmila</title>
-    <link rel="shortcut icon" href="assets/img/favicon.ico.png" type="image/x-icon">
-</head>
 
-<body>
-    <header>
-        <div class="cabecera">
-            <div class="contenedorLogo">
-            <a href="../index.html">
-                <img src="../assets/img/codoacodo.png" alt="Logo Codo a Codo 4.0" width="125px">
-            </a>
-            <h2>Conf Bs As</h2>
-            </div>
-            
-            <nav>
-               <input class="checkbox" type="checkbox">
-               <img src="../assets/img/menuhamburguesa.png" alt="menu hamburguesa" class="icono menuHamburguesa">
-               <img src="../assets/img/menux.png" alt="cierre menu" class="icono cierre">
-                <ul class="menu">
-                    <li> <a href="../index.html#conferencia">La conferencia</a></li> 
-                    <li> <a href="../index.html#oradores" class="colorGris">Los oradores</a></li>
-                    <li> <a href="../index.html#lugarFecha" class="colorGris">El lugar y la fecha</a></li>
-                    <li> <a href="../index.html#formularioOrador" class="colorGris">Conviértete en orador</a></li>
-                    <li> <a href="#" class="colorVerde">Comprar ticket </a></li>
-                </ul>
             </nav>
         </div>
+        <section class="conferencia">
+            <div class="conferenciaInfo">
+                <h1>Conf Bs As</h1>
+                <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+                <div class="conferenciaEnlace">
+                    <a href="" class="botonBlanco">Quiero ser orador</a>
+                    <a href="./pages/tickets.html" class="botonVerde">Comprar tickets</a>
+                </div>
+            </div>    
+        </section>
     </header>
 
-    <main>
-        <section class="contenedorTickets">
-            <div class="estudiante">
-                <h1>Estudiante</h1>
-                <p>Tienen un descuento</p>
-                <p>80%</p>
-                <p>* presentar documentación</p>
-            </div>
-            <div class="trainee">
-                <h1>Trainee</h1>
-                <p>Tienen un descuento</p>
-                <p>50%</p>
-                <p>* presentar documentación</p>
-            </div>
-            <div class="junior">
-                <h1>Junior</h1>
-                <p>Tienen un descuento</p>
-                <p>15%</p>
-                <p>* presentar documentación</p>
+    <main> 
+        <section id="oradores"> 
+            <h2 class="textoChico">CONOCE A LOS <br> <span class="textoGrande">ORADORES</span></h2>
+            <div class="contenedorCard">
+                <div class="cardImagen">
+                    <img src="./assets/img/steve.jpg" alt="Foto de Steve Jobs" width="400">
+                    <h4 class="textoJs">JavaScript</h4>
+                    <h4 class="textoReact">React</h4>
+                    <h3>Steve Jobs</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla quod ea expedita, illum veritatis ullam cupiditate, ducimus ad fugit possimus assumenda in qui saepe esse molestiae sunt molestias repudiandae!</p>
+                </div>
+                <div class="cardImagen">
+                    <img src="./assets/img/bill.jpg" alt="Foto de Bill Gates" width="400">
+                    <h4 class="textoJs">JavaScript</h4>
+                    <h4 class="textoReact">React</h4>
+                    <h3>Bill Gates</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla quod ea expedita, illum veritatis ullam cupiditate, ducimus ad fugit possimus assumenda in qui saepe esse molestiae sunt molestias repudiandae!</p>
+                </div>
+                <div class="cardImagen">
+                    <img src="./assets/img/ada.jpeg" alt="Foto de Ada Lovelace" width="400">
+                    <h4 class="txtNegocios">Negocios</h4>
+                    <h4 class="txtStartup">StartUps</h4>
+                    <h3>Ada Lovelace</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla quod ea expedita, illum veritatis ullam cupiditate, ducimus ad fugit possimus assumenda in qui saepe esse molestiae sunt molestias repudiandae!</p>
+                </div>
             </div>
         </section>
 
-        <section class="contenedorFormTickets">
-            <p>VENTA</p>
-            <h2>VALOR DE TICKET $200</h2>
-
-            <form action="">
-                <div>
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
-                </div>
-
-                <div>
-                    <input type="email" id="email" name="email" placeholder="Correo" required>
-                </div>
-
-                <div>
-                    <label for="cantidad">Cantidad</label>
-                    <input type="number" id="cantidad" name="cantidad" min="1" max="10">
-
-                    <label for="categoria">Categoría</label>
-                    <select name="categoria" id="categoria">
-                        <option value="Estudiante" selected>Estudiante</option>
-                        <option value="Trainee">Trainee</option>
-                        <option value="Junior">Junior</option>
-                    </select>
-                </div>
-
-                <div>
-                    <input id="total" name="total" type="text" value="Total a pagar: $" readonly="">
-                </div>
-
-                <div>
-                    <input type="submit" id="resumen" value="Resumen">
-                    <input type="reset" id="borrar" value="Borrar">
-                </div>
-
-
-            </form>
-
+        <section id="lugarFecha">
+            <div class="contenedorFecha">
+                <div class="octubre">
+                    <h2 class="margenOct">Bs As - Octubre</h2>
+                    <p class="margenOct">Buenos Aires es la provincia y localidad más grande del estado de Argentina. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptate nesciunt, velit architecto porro totam ut fugiat quam. Laudantium accusamus delectus quibusdam rerum nemo vero cum suscipit quod reiciendis repellat.</p>
+                    <span><a href="" class="colorBlanco">Conocé más</a></span>
+               </div>
+            </div> 
         </section>
 
+        <section id="formularioOrador">
+            <div class="contenedorFormulario">
+                <h3 class="textoChico">CONVIÉRTETE EN UN <br> <span class="textoGrande">ORADOR</span></h3>
+                <p class="charlaIgnite">Anotate como orador para una charla ignite. Cuéntanos de qué quieres hablar!</p>
+                <form action="" class="formulario">
+                    <div class="contenedorInput">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                    </div>
+                    <div class="contenedorText">
+                        <textarea name="comentario" id="comentario" cols="60" rows="5" placeholder="Sobre qué quieres hablar?"></textarea>
+                        <span class="incluyeTitulo"><p>Recuerda incluir un título para tu charla</p></span>
+                    </div>
+                    <div class="botonSubmit">
+                        <input type="submit">
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
+
+    <!--<aside>
+        !--publicidad--
+        <p>Patrocinado</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </aside>-->
 
     <footer>
         <!--<a href="https://www.whatsapp.com"></a>
