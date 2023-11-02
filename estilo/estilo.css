@@ -19,6 +19,9 @@ a {
 .colorBlanco{
     color: white;
 }
+.cen{
+    text-align: center;
+}
 /*----HEADER----*/
 .cabecera{
     background-color: rgb(53, 58, 64);
@@ -253,6 +256,96 @@ input[type="submit"]{
     color: antiquewhite;
     font-size: 1.2em;
     cursor: pointer;
+}
+/*----------------TICKETS----------------*/
+.tickets{
+    height: 200px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.estudiante, .trainee{
+    border: 2px solid #347ba4;
+}
+.junior{
+    border: 2px solid orange;
+}
+.estudiante, .trainee, .junior{
+    text-align: center;
+    width: 22%;
+    margin: 0px 3px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.estudiante, .trainee, .junior, h1 p{
+    justify-content: space-evenly;
+}
+/*form tickets*/
+.contFormTickets{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.formTickets{
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.contenedorUno, .contenedorDos, .contenedorTres, .etiquetaForm, .contenedorCuatro{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.formTickets div input{
+    width: 49%;
+    margin: 5px auto;
+    padding: 5px 5px 8px;
+    border: 1px solid rgb(195, 193, 193);
+    border-radius: 5px;
+    font-size: 1em;
+}
+.formTickets div input[type=email]{
+    width: 99%;
+    margin: 5px auto;
+}
+.formTickets div input[type=number], select{
+    width: 49%;
+    margin: 5px auto;
+    padding: 5px 5px 8px;
+    border: 1px solid rgb(195, 193, 193);
+    border-radius: 5px;
+    font-size: 1em;
+}
+.contenedorCuatro input[type=text]{
+    width: 99%;
+    padding: 12px;
+    background-color: #89bad7a4;
+    color: #003956;
+}
+.etiquetaForm{
+    display: flex;
+    width: 100%;
+}
+.etiquetaForm label{
+    width: 48%;
+    margin: 0px 5px;
+}
+input[type=reset]{
+    background-color: rgb(170, 13, 13);
+    color: white;
 }
 /*----FOOTER---*/
 footer{
