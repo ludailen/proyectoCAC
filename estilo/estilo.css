@@ -41,6 +41,9 @@ header div nav ul li {
     display: inline;
     margin: 5px;
 }
+header div nav ul li a:hover{
+    color: white;
+}
 .checkbox, .icono{
     display: none;
 }
@@ -72,12 +75,22 @@ header div nav ul li {
     padding: 15px; 
     margin: 5px;
 }
+.botonBlanco:hover{
+    background-color:#003956be;
+    border-color: #003956be;
+    color: #2fca51;
+}
 .botonVerde{
     background-color: #27A844;
     border: 1.5px solid #27A844;
     border-radius: 5px;
     padding: 15px; 
     margin: 5px;
+}
+.botonVerde:hover{
+    background-color:#e6e9ebcc;
+    border-color: #e6e9ebcc;
+    color: #157227;
 }
 /*---------CARDS CONOCE A LOS ORADORES---------*/
 .textoChico{
@@ -257,6 +270,10 @@ input[type="submit"]{
     font-size: 1.2em;
     cursor: pointer;
 }
+input[type="submit"]:hover{
+    background-color: rgba(150, 201, 62, 0.716);
+    color: rgb(3, 89, 3);
+}
 /*----------------TICKETS----------------*/
 .tickets{
     height: 200px;
@@ -286,10 +303,13 @@ input[type="submit"]{
 .estudiante, .trainee, .junior, h1 p{
     justify-content: space-evenly;
 }
+.estudiante:hover, .trainee:hover, .junior:hover{
+    box-shadow: 2px 2px 6px 0px #787676;
+}
 /*form tickets*/
 .contFormTickets{
     width: 70%;
-    margin: auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -302,14 +322,13 @@ input[type="submit"]{
     flex-direction: column;
     flex-wrap: wrap;
 }
-.contenedorUno, .contenedorDos, .contenedorTres, .etiquetaForm, .contenedorCuatro{
+ .etiquetaForm, .contenedorUno, .contenedorDos, .contenedorTres, .contenedorCuatro, .contenedorCinco{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
-.formTickets div input{
+.formTickets div input[type=text], input[type=email]{
     width: 49%;
     margin: 5px auto;
     padding: 5px 5px 8px;
@@ -330,7 +349,7 @@ input[type="submit"]{
     font-size: 1em;
 }
 .contenedorCuatro input[type=text]{
-    width: 99%;
+    width: 99% !important;
     padding: 12px;
     background-color: #89bad7a4;
     color: #003956;
@@ -343,9 +362,25 @@ input[type="submit"]{
     width: 48%;
     margin: 0px 5px;
 }
-input[type=reset]{
-    background-color: rgb(170, 13, 13);
+.contenedorCinco input[type=submit], input[type=reset]{
     color: white;
+    width: 49%;
+    margin: 5px auto;
+}
+.contenedorCinco input[type=submit]:hover{
+    background-color: rgba(150, 201, 62, 0.716);
+    color: rgb(3, 89, 3);
+}
+.contenedorCinco input[type=reset]{
+    background-color: rgb(140, 5, 5);
+    cursor: pointer;
+    border: 1px solid rgb(195, 193, 193);
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+.contenedorCinco input[type=reset]:hover{
+    background-color: #bb2c2c9b;
+    color: rgb(119, 8, 8);
 }
 /*----FOOTER---*/
 footer{
