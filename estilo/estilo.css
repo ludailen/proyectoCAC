@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /*CLASES UTILITARIAS*/
 a {
     text-decoration: none;
@@ -348,11 +349,20 @@ input[type="submit"]:hover{
     border-radius: 5px;
     font-size: 1em;
 }
-.contenedorCuatro input[type=text]{
+/*.contenedorCuatro input[type=text]{
     width: 99% !important;
     padding: 12px;
     background-color: #89bad7a4;
     color: #003956;
+}*/
+.contenedorCuatro{
+    width: 100% !important;
+    padding: 12px;
+    background-color: #89bad7a4;
+    border-radius: 5px;
+    color: #003956;
+    display: inline;
+    text-align: left;
 }
 .etiquetaForm{
     display: flex;

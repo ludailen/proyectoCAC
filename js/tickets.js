@@ -1,5 +1,5 @@
 const ticket =200;
-
+console.log(ticket);
 let estudianteDesc = 80;
 let traineeDesc = 50;
 let juniorDesc = 15;
@@ -7,24 +7,40 @@ let juniorDesc = 15;
 let nombre = document.getElementById("nombre");
 let apellido = document.getElementById("apellido");
 let email = document.getElementById("email");
-let cantidad = document.getElementById("cantidad");
-let categoria = document.getElementById("categoria");
+let totalPagar = document.getElementById("totalPagar");
 
-let precio = (cantidad.value) * ticket;
+const precioTotal = (event) => {
+    event.preventDefault();
 
-const precioTotal = () => {
-switch (categoria.value) {
-    case "1":
-        precio = precio - (precio*(estudianteDesc/100));
-        break;
-    case "2":
-        precio = precio - (precio*(traineeDesc/100));
-        break;
-    case "3":
-        precio = precio - (precio*(traineeDesc/100));
-        break;
+    let cantidadValor = cantidad.value;
+    let categoriaValor = categoria.value;
+    let precio = cantidadValor * ticket;
+
+    console.log("Cantidad: " + cantidadValor);
+    console.log("Categoría: " + categoriaValor);
+    console.log("precio inicial: " + precio);
+
+    switch (categoriaValor) {
+        case "Sin categoría":
+            break;
+        case "Estudiante":
+            precio = precio - (estudianteDesc / 100 * precio);
+            break;
+        case "Trainee":
+            precio = precio - (traineeDesc / 100 * precio);
+            break;
+        case "Junior":
+            precio = precio - (juniorDesc / 100 * precio);
+            break;
+    }
+    console.log("Precio calculado: " + precio);
+    totalPagar.innerHTML = "Total a pagar: $" + precio;
 }
 
-total.innerHTML = precio;
+resumen.addEventListener("click", precioTotal);
+
+const resetTotalPagar = () => {
+    totalPagar.innerHTML = "Total a pagar: $";
 }
-btnResumen.addEventListener('click', precioTotal);
+
+borrar.addEventListener("click", resetTotalPagar);
